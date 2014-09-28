@@ -5,13 +5,11 @@ iApplied
 iApplied is a webapp to help you keep track of jobs you've applied for!
 
 Adding
-
-![](./list.png)
+![](./add.png)
 
 
 Searching
-
-![](./add.png)
+![](./list.png)
 
 
 
