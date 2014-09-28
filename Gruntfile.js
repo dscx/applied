@@ -10,7 +10,10 @@
 module.exports = function (grunt) {
 
   // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt, {
+    buildcontrol: 'grunt-build-control'
+  });
+
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -334,6 +337,28 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        connectCommits: false,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      heroku: {
+        options: {
+          remote: 'heroku',
+          branch: 'master'
+        }
+      },
+      openshift: {
+        options: {
+          remote: 'openshift',
+          branch: 'master'
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -390,18 +415,18 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
-    'useminPrepare',
+    // 'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    'concat',
-    'ngmin',
+    // 'concat',
+    // 'ngmin',
     'copy:dist',
-    'cdnify',
-    'cssmin',
+    // 'cdnify',
+    // 'cssmin',
     'uglify',
     'filerev',
-    'usemin',
-    'htmlmin'
+    // 'usemin',
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
