@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "express": "^4.9.5",
-    "gzippo": "^0.2.0"
+    "gzippo": "^0.2.0",
+    "ng-grid": "^2.0.1",
+    "ng-table": "^0.3.1-npm"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

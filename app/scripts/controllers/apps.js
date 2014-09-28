@@ -9,11 +9,11 @@
  */
 angular.module('appliedApp')
   .controller('AppsCtrl', function ($scope) {
-    // $scope.testForms = [
-    //   {'company': 'Apple', 'DateApplied': 'Jan 1st', 'Link': 'www.apple.com', 'description': 'Mac genius', 'id': 12836},
-    //   {'company': 'Microsoft', 'DateApplied': 'Jan 2nd', 'Link': 'www.microsoft.com', 'description': 'Software Engineer', 'id': 17728},
-    //   {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
-    // ];
+    $scope.testForms = [
+      {'company': 'Apple', 'DateApplied': 'Jan 1st', 'Link': 'www.apple.com', 'description': 'Mac genius', 'id': 12836},
+      {'company': 'Microsoft', 'DateApplied': 'Jan 2nd', 'Link': 'www.microsoft.com', 'description': 'Software Engineer', 'id': 17728},
+      {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
+    ];
 
     $scope.applications = []
     //$scope.applications.entries = {};
@@ -43,6 +43,8 @@ angular.module('appliedApp')
       }
 
     };
+
+    $scope.gridOptions = { data: 'testForms' };
 
 
     $scope.LoadData = function(){
