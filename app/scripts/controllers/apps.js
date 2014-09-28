@@ -9,11 +9,11 @@
  */
 angular.module('appliedApp')
   .controller('AppsCtrl', function ($scope) {
-    $scope.testForms = [
-      {'company': 'Apple', 'DateApplied': 'Jan 1st', 'Link': 'www.apple.com', 'description': 'Mac genius', 'id': 12836},
-      {'company': 'Microsoft', 'DateApplied': 'Jan 2nd', 'Link': 'www.microsoft.com', 'description': 'Software Engineer', 'id': 17728},
-      {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
-    ];
+    // $scope.testForms = [
+    //   {'company': 'Apple', 'DateApplied': 'Jan 1st', 'Link': 'www.apple.com', 'description': 'Mac genius', 'id': 12836},
+    //   {'company': 'Microsoft', 'DateApplied': 'Jan 2nd', 'Link': 'www.microsoft.com', 'description': 'Software Engineer', 'id': 17728},
+    //   {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
+    // ];
 
     $scope.applications = []
     //$scope.applications.entries = {};
@@ -23,11 +23,12 @@ angular.module('appliedApp')
     $scope.submitForm = function(isValid) {
       var app = {}
       if (isValid) {
-        app.company = $scope.name 
-        app.date = $scope.user.date
-        app.link = $scope.link
-        app.id = $scope.id
-        app.description = $scope.description
+        app.company = $scope.name ;
+        app.date = $scope.user.date;
+        app.link = $scope.link;
+        app.id = $scope.id;
+        app.description = $scope.description;
+        app.keywords = $scope.keywords;
 
         $scope.applications.push(angular.copy(app));
         console.log(app, 'saved!')
@@ -38,6 +39,7 @@ angular.module('appliedApp')
         $scope.link = '';
         $scope.id = '';
         $scope.description = '';
+        $scope.keywords = '';
       }
 
     };
