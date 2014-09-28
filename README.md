@@ -1,8 +1,9 @@
 iApplied
 =======
-[iapplied](http://iapplied.heroku.com)
 
-iApplied is a webapp to help you keep track of jobs you've applied for!
+[iApplied](http://iapplied.heroku.com)is a webapp to help you keep track of jobs you've applied for!
+
+----
 
 Adding
 
