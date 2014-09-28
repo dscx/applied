@@ -29,7 +29,7 @@ from root:
 
 Usage
 -----
-    * `grunt serve`
+    `grunt serve`
 
 Contributing
 ------------
