@@ -15,9 +15,10 @@ angular.module('appliedApp')
       {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
     ];
 
-    $scope.applications = {}
-    $scope.applications.entries = {};
-    $scope.applications.loaded = false;
+    $scope.applications = []
+    //$scope.applications.entries = {};
+    $scope.applications[0] = false;
+
 
     $scope.submitForm = function(isValid) {
       var app = {}
@@ -27,9 +28,9 @@ angular.module('appliedApp')
         app.link = $scope.link
         app.id = $scope.id
         app.description = $scope.description
-        $scope.applications.entries[app.company] = angular.copy(app);
+        $scope.applications.push(angular.copy(app));
         console.log(app, 'saved!')
-        window.localStorage.setItem('apps', JSON.stringify($scope.applications.entries))
+        window.localStorage.setItem('apps', JSON.stringify($scope.applications))
       }
 
     };
@@ -37,14 +38,14 @@ angular.module('appliedApp')
 
     $scope.LoadData = function(){
           var saved = window.localStorage.getItem('apps');
-          if($scope.applications.loaded === false){
+          //if($scope.applications[0] === false){
             if(saved !== 'undefined'){
               saved = JSON.parse(saved);
-              angular.copy(saved, $scope.applications.entries);
+              angular.copy(saved, $scope.applications);
               console.log('Data Loaded!')
-              $scope.applications.loaded = true;
+              $scope.applications[0] = true;
             }
-          }
+          //}
         };
 
       $scope.LoadData();

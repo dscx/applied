@@ -1,6 +1,6 @@
 
 <body ng-app="validationApp">
-<div class="container">
+<div class="container jumbotron">
 <div class="col-sm-8 col-sm-offset-2">
     
  
@@ -42,12 +42,17 @@
     </form>
 </div><!-- col-sm-8 -->
 <div class="completed">
-  <list ng-repeat="item in applications.entries">
+
+<input ng-model="search" id="search" placeholder="search...">
+  <list ng-repeat="item in applications | filter:search">
     <p><a href="http://{{item.link}}">{{item.company}}</a></p>
   </list>
 </div>
+
+
 </div><!-- /container -->
 
+<!--  -->
 <!-- {{name}}
 {{user.date}}
 {{link}}
