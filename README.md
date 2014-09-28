@@ -6,12 +6,12 @@ iApplied is a webapp to help you keep track of jobs you've applied for!
 
 Adding
 
-![alt](http://i.imgur.com/FoqUy5I.png =300px)
+![](./list.png)
 
 
 Searching
 
-![alt](http://i.imgur.com/RuzBIBi.png =300px)
+![](./add.png)
 
 
 
