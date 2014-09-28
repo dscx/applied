@@ -28,9 +28,16 @@ angular.module('appliedApp')
         app.link = $scope.link
         app.id = $scope.id
         app.description = $scope.description
+
         $scope.applications.push(angular.copy(app));
         console.log(app, 'saved!')
         window.localStorage.setItem('apps', JSON.stringify($scope.applications))
+
+        $scope.name = '';
+        $scope.user.date = '';
+        $scope.link = '';
+        $scope.id = '';
+        $scope.description = '';
       }
 
     };

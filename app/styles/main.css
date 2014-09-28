@@ -79,6 +79,8 @@ body {
 }
 
 .completed {
-  position: absolute;
-  top: 20%;
+  position: relative;
+  text-align: center;
+  top: -500px;
+  left: -45%;
 }
