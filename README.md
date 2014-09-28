@@ -41,7 +41,8 @@ See [Contributing](CONTRIBUTING.md)
 
 Roadmap
 ---
-* NodeJS back-end
+* ~~NodeJS back-end~~
+* MongoDB for persistent data
 * Google Authentication
 * Import/Export data
 * Reminders
