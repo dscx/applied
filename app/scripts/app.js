@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'smart-table'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,9 +28,9 @@ angular
         templateUrl: 'views/apps.html',
         controller: 'AppsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/form', {
+        templateUrl: 'views/form.html',
+        controller: 'AppsCtrl'
       })
       .otherwise({
         redirectTo: '/'

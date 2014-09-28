@@ -84,3 +84,7 @@ body {
   top: -500px;
   left: -45%;
 }
+
+th {
+    text-align: center;
+}
