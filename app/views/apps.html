@@ -37,16 +37,21 @@
         </div>
         
         
-        <!-- SUBMIT BUTTON -->
-         <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button
+        <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Save</button>
         
     </form>
 </div><!-- col-sm-8 -->
+<div class="completed">
+  <list ng-repeat="item in applications.entries">
+    <p><a href="http://{{item.link}}">{{item.company}}</a></p>
+  </list>
+</div>
 </div><!-- /container -->
-{{name}}
+
+<!-- {{name}}
 {{user.date}}
 {{link}}
 {{id}}
-{{description}}
+{{description}} -->
 </body>
 

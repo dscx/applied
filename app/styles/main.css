@@ -77,3 +77,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.completed {
+  position: absolute;
+  top: 20%;
+}
