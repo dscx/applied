@@ -53,8 +53,11 @@ See [Contributing](CONTRIBUTING.md)
 
 Roadmap
 ---
+(In order of priority)
+
 * ~~NodeJS back-end~~
+* Abilitiy to add fields after submitting
+* Import/Export data
 * MongoDB for persistent data
 * Google Authentication
-* Import/Export data
 * Reminders
