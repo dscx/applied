@@ -24,12 +24,12 @@ Installation
 -----------
 from root:
 
-    `npm install`
-    `bower install`
+`npm install`
+`bower install`
 
 Usage
 -----
-    `grunt serve`
+`grunt serve`
 
 Contributing
 ------------
