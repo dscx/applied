@@ -9,16 +9,8 @@
  */
 angular.module('appliedApp')
   .controller('AppsCtrl', function ($scope) {
-    // $scope.testForms = [
-    //   {'company': 'Apple', 'DateApplied': 'Jan 1st', 'Link': 'www.apple.com', 'description': 'Mac genius', 'id': 12836},
-    //   {'company': 'Microsoft', 'DateApplied': 'Jan 2nd', 'Link': 'www.microsoft.com', 'description': 'Software Engineer', 'id': 17728},
-    //   {'company': 'Sweet Startup', 'DateApplied': 'Jan 3rd', 'Link': 'www.google.com', 'description': 'Software Engineer', 'id': 92036}
-    // ];
 
-    $scope.applications = []
-    //$scope.applications.entries = {};
-    //$scope.applications[0] = false;
-
+    $scope.applications = [];
 
     $scope.submitForm = function(isValid) {
       var app = {}
@@ -31,7 +23,6 @@ angular.module('appliedApp')
         app.keywords = $scope.keywords;
 
         $scope.applications.push(angular.copy(app));
-        // window.localStorage.setItem('apps', JSON.stringify($scope.applications))
         $scope.SaveData();
       
 
@@ -45,8 +36,19 @@ angular.module('appliedApp')
 
     };
 
+    $scope.isEditing = false;
     $scope.edit = function(item){
+      $scope.isEditing = true;
       console.log(item);
+    }
+
+    $scope.editSave = function(item){
+      $scope.isEditing = false;
+      //should pull data from fields
+      //should preserve field data
+      //should ovveride that index's form
+        //$scope.applications[item] = 
+      ///should save all data again when save is pressed
     }
 
     $scope.remove = function(item){
