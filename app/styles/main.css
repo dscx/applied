@@ -34,7 +34,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 900px;
   }
 }
 .container-narrow > hr {
@@ -85,13 +85,14 @@ body {
   left: -45%;
 }
 
-th {
+th, td, tr {
     text-align: center;
 }
 table, th , td {
   border: 1px solid #eeeeee;
   border-collapse: collapse;
   padding: 5px;
+  width: 60px;
 }
 table tr:nth-child(odd) {
   background-color: #eeeeee;
