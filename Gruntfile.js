@@ -415,18 +415,18 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
-    // 'useminPrepare',
+    'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    // 'concat',
-    // 'ngmin',
+    'concat',
+    'ngmin',
     'copy:dist',
-    // 'cdnify',
-    // 'cssmin',
+    'cdnify',
+    'cssmin',
     'uglify',
     'filerev',
-    // 'usemin',
-    // 'htmlmin'
+    'usemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
