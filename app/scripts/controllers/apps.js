@@ -17,7 +17,7 @@ angular.module('appliedApp')
 
     $scope.applications = []
     //$scope.applications.entries = {};
-    $scope.applications[0] = false;
+    //$scope.applications[0] = false;
 
 
     $scope.submitForm = function(isValid) {
@@ -31,8 +31,9 @@ angular.module('appliedApp')
         app.keywords = $scope.keywords;
 
         $scope.applications.push(angular.copy(app));
-        console.log(app, 'saved!')
-        window.localStorage.setItem('apps', JSON.stringify($scope.applications))
+        // window.localStorage.setItem('apps', JSON.stringify($scope.applications))
+        $scope.SaveData();
+      
 
         $scope.name = '';
         $scope.user.date = '';
@@ -44,19 +45,32 @@ angular.module('appliedApp')
 
     };
 
+    $scope.edit = function(item){
+      console.log(item);
+    }
+
+    $scope.remove = function(item){
+      if(window.confirm('Really Delete?')){
+        $scope.applications.splice(item, 1);
+      }
+      $scope.SaveData();
+    }
 
     $scope.LoadData = function(){
           var saved = window.localStorage.getItem('apps');
-          //if($scope.applications[0] === false){
             if(saved !== 'undefined'){
               saved = JSON.parse(saved);
               angular.copy(saved, $scope.applications);
               console.log('Data Loaded!')
-              $scope.applications[0] = true;
             }
-          //}
         };
 
+    $scope.SaveData = function(){
+      window.localStorage.setItem('apps', JSON.stringify($scope.applications))
+      console.log('saved!')
+    };
+
+    //initial load of data
       $scope.LoadData();
   });
 

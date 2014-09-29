@@ -13,6 +13,7 @@
     <th>Job Posting</th>
     <th>Description</th>
     <th>Keywords</th>
+    <th>Edit/Delete</th>
   </tr>
   </thead>
   <tbody>
@@ -22,6 +23,8 @@
     <td><a ng-href="http://{{item.link}}">{{item.id}}</a></td>
     <td>{{item.description}}</td>
     <td>{{item.keywords}}</td>
+    <td><span class="glyphicon glyphicon-pencil" ng-click="edit($index)">     <span class="glyphicon glyphicon-remove-circle" ng-click="remove($index)"></span></td>
+
   </tr>
   </tbody>
 </table>
