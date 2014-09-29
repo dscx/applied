@@ -2,7 +2,7 @@
 <body>
 <div class="container jumbotron">
 
-<table st-table="applications" class="table table-striped" id="searchTextResults">
+<!-- <table st-table="applications" class="table table-striped" id="searchTextResults">
   <thead>
   <tr>
     <th>Company</th>
@@ -26,7 +26,35 @@
     <td>{{item.keywords}}</td>
   </tr>
   </tbody>
+</table> -->
+
+
+<table class="table" id="searchTextResults">
+  <thead>
+    <td colspan="6">
+      <input placeholder="search.." ng-model="search" class="form-control" type="search"/>
+    </td>
+  <tr>
+    <th>Company</th>
+    <th>Date</th>
+    <th>Job posting</th>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Keywords</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in applications | filter:search">
+    <td>{{item.company}}</td>
+    <td>{{item.date}}</td>
+    <td><a ng-href="http://{{item.link}}">{{item.link}}</a></td>
+    <td>{{item.id}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.keywords}}</td>
+  </tr>
+  </tbody>
 </table>
+
 
 
 </div><!-- /container -->

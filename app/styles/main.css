@@ -88,3 +88,14 @@ body {
 th {
     text-align: center;
 }
+table, th , td {
+  border: 1px solid #eeeeee;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
