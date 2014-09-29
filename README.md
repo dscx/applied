@@ -56,7 +56,8 @@ Roadmap
 (In order of priority)
 
 * ~~NodeJS back-end~~
-* Abilitiy to add fields after submitting
+* Abilitiy to edit fields after submitting
+* Ability to remove entries altogether.
 * Import/Export data
 * MongoDB for persistent data
 * Google Authentication
