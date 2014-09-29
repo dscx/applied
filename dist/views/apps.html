@@ -1,1 +1,62 @@
-<body> <div class="container jumbotron"> <table st-table="applications" class="table table-striped" id="searchTextResults"> <thead> <tr> <th>Company <th>Date <th>Job posting <th>ID <th>Description <th>Keywords  <td colspan="6"> <input st-search placeholder="search.." class="input-sm form-control" type="search" st-delay="100">   <tbody> <tr ng-repeat="item in applications"> <td>{{item.company}} <td>{{item.date}} <td><a ng-href="http://{{item.link}}">{{item.link}}</a> <td>{{item.id}} <td>{{item.description}} <td>{{item.keywords}}   </table> </div><!-- /container --> 
+
+<body>
+<div class="container jumbotron">
+
+<!-- <table st-table="applications" class="table table-striped" id="searchTextResults">
+  <thead>
+  <tr>
+    <th>Company</th>
+    <th>Date</th>
+    <th>Job posting</th>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Keywords</th>
+  </tr>
+    <td colspan="6">
+      <input st-search placeholder="search.." class="input-sm form-control" type="search" st-delay="100"/>
+    </td>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in applications">
+    <td>{{item.company}}</td>
+    <td>{{item.date}}</td>
+    <td><a ng-href="http://{{item.link}}">{{item.link}}</a></td>
+    <td>{{item.id}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.keywords}}</td>
+  </tr>
+  </tbody>
+</table> -->
+
+
+<table class="table" id="searchTextResults">
+  <thead>
+    <td colspan="6">
+      <input placeholder="search.." ng-model="search" class="form-control" type="search"/>
+    </td>
+  <tr>
+    <th>Company</th>
+    <th>Date</th>
+    <th>Job posting</th>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Keywords</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in applications | filter:search">
+    <td>{{item.company}}</td>
+    <td>{{item.date}}</td>
+    <td><a ng-href="http://{{item.link}}">{{item.link}}</a></td>
+    <td>{{item.id}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.keywords}}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+</div><!-- /container -->
+
+</body>
