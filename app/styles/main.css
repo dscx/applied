@@ -92,11 +92,14 @@ table, th , td {
   border: 1px solid #eeeeee;
   border-collapse: collapse;
   padding: 5px;
-  width: 60px;
+  width: 75px;
 }
 table tr:nth-child(odd) {
   background-color: #eeeeee;
 }
 table tr:nth-child(even) {
   background-color: #ffffff;
+}
+span.glyphicon {
+    font-size: 1.1em;
 }
