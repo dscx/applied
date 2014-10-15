@@ -26,7 +26,7 @@ angular.module('appliedApp')
         app.company = $scope.name ;
         app.date = $scope.user.date;
         app.link = $scope.link;
-        app.id = $scope.id;
+        app.id = $scope.id || Math.floor(Math.random() * 1234)
         app.description = $scope.description;
         app.keywords = $scope.keywords;
 
