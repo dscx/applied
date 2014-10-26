@@ -16,7 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'smart-table'
+    'smart-table',
+    'ui.sortable',
+    'xeditable'
   ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -19,6 +19,17 @@ angular.module('appliedApp')
     //$scope.applications.entries = {};
     //$scope.applications[0] = false;
 
+    $scope.statuses = [
+          {value: 1, text: 'Applied'},
+          {value: 2, text: 'Interview Scheduled'},
+          {value: 3, text: 'Interview Complete'},
+          {value: 4, text: 'Phone Screen Scheduled'},
+          {value: 5, text: 'Phone Screen Complete'},
+          {value: 6, text: 'Final Interview Scheduled'},
+          {value: 7, text: 'Final Interview Complete'},
+          {value: 8, text: 'Offer'}
+        ]; 
+
 
     $scope.submitForm = function(isValid) {
       var app = {};
@@ -29,6 +40,7 @@ angular.module('appliedApp')
         app.id = $scope.id || Math.floor(Math.random() * 1234)
         app.description = $scope.description;
         app.keywords = $scope.keywords;
+        app.status = {value: 1, text: 'Applied'};
 
         $scope.applications.push(angular.copy(app));
         // window.localStorage.setItem('apps', JSON.stringify($scope.applications))
@@ -41,6 +53,7 @@ angular.module('appliedApp')
         $scope.id = '';
         $scope.description = '';
         $scope.keywords = '';
+        
       }
 
     };
