@@ -19,12 +19,12 @@
   </thead>
   <tbody ui-sortable ng-model="applications" >
   <tr ng-repeat="item in applications | filter:search">
-    <td editable-text="item.company" e-name="company">{{item.company}}</td>
-    <td editable-date="item.date" e-name="date">{{item.date}}</td>
-    <td editable-text="item.link" e-name="link"><a ng-href="{{item.link}}">link</a></td>
-    <td editable-text="item.description" e-name="description">{{item.description}}</td>
-    <td editable-text="item.keywords" e-name="keywords">{{item.keywords}}</td>
-    <td editable-select="item.status" e-ng-options="s.text for s in statuses" e-name="keywords">{{item.status.text}}</td>
+    <td editable-text="item.company" e-name="company" onaftersave="SaveData()">{{item.company}}</td>
+    <td editable-date="item.date" e-name="date" onaftersave="SaveData()">{{item.date}}</td>
+    <td editable-text="item.link" e-name="link" onaftersave="SaveData()"><a ng-href="{{item.link}}">link</a></td>
+    <td editable-text="item.description" e-name="description" onaftersave="SaveData()">{{item.description}}</td>
+    <td editable-text="item.keywords" e-name="keywords" onaftersave="SaveData()">{{item.keywords}}</td>
+    <td editable-select="item.status" e-ng-options="s.text for s in statuses" e-name="keywords" onaftersave="SaveData()">{{item.status.text}}</td>
     <td><span class="glyphicon glyphicon-remove-circle" ng-click="remove($index)"></span></td>
 
   </tr>
