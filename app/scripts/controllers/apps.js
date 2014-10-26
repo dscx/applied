@@ -27,7 +27,9 @@ angular.module('appliedApp')
           {value: 5, text: 'Phone Screen Complete'},
           {value: 6, text: 'Final Interview Scheduled'},
           {value: 7, text: 'Final Interview Complete'},
-          {value: 8, text: 'Offer'}
+          {value: 8, text: 'Offer'},
+          {value: 9, text: 'Rejected'},
+          {value: 10, text: 'Declined'}
         ]; 
 
 
@@ -37,7 +39,7 @@ angular.module('appliedApp')
         app.company = $scope.name ;
         app.date = $scope.user.date;
         app.link = $scope.link;
-        app.id = $scope.id || Math.floor(Math.random() * 1234)
+        app.id = $scope.id || Math.floor(Math.random() * 1234);
         app.description = $scope.description;
         app.keywords = $scope.keywords;
         app.status = {value: 1, text: 'Applied'};
